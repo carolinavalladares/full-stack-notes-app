@@ -17,6 +17,7 @@ form.addEventListener("submit", (e) => {
   };
 
   postNote(newNote);
+  window.location.reload();
 
   // Clear inputs
   titleInput.value = "";
@@ -86,4 +87,6 @@ function handleDelete(e) {
   console.log(noteId);
 
   deleteNote(noteId);
+
+  window.location.reload();
 }

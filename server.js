@@ -9,7 +9,7 @@ const getAllItems = require("./js/getAllItems");
 const postItem = require("./js/postItem");
 const deleteItem = require("./js/deleteItem");
 
-app.use([cors(), express.json()]);
+app.use([cors(), express.json(), express.static("public")]);
 
 // Root
 app.get("/", (req, res) => {
@@ -32,5 +32,6 @@ app.delete("/delete-item/:id", (req, res) => {
 });
 
 app.listen(PORT, () => {
+  console.log(`Notes App is live on http://localhost:${PORT}/index.html`);
   console.log(`listening on port ${PORT}...`);
 });
