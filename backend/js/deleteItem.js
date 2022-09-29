@@ -11,14 +11,14 @@ const deleteItem = (filePath, itemId, res) => {
 
     let document = JSON.parse(fileContent);
 
-    let deletedItem = document.data.find((item) => item.id === itemId);
+    let deletedItem = document.notes.find((item) => item.id === itemId);
 
     if (!deletedItem) {
       res.status(404).json({ message: "item not found" });
       return;
     }
 
-    document.data = document.data = document.data.filter((item) => {
+    document.notes = document.notes = document.notes.filter((item) => {
       return item.id !== itemId;
     });
 

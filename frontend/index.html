@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Notes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <form>
+        <input class="title-input" type="text" placeholder="enter title" />
+        <textarea cols="30" rows="10" placeholder="Enter note..."></textarea>
+        <label>
+          <input type="checkbox" class="checkbox" />
+          <div class="checkbox-mask"></div>
+          Important
+        </label>
+        <button title="submit">+</button>
+      </form>
+
+      <div class="notes-container">
+        <!-- Note model -->
+        <!-- <div class="note-preview-item">
+          <p class="note-preview-title">Title</p>
+          <p class="note-preview">This is a preview...</p>
+          <button class="delete-btn" title="delete">&times;</button>
+        </div> -->
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -29,7 +29,7 @@ const postItem = (filePath, newNote, res) => {
 
     newNote.id = Math.floor(Math.random() * Date.now());
 
-    document.data = [...document.data, newNote];
+    document.notes = [...document.notes, newNote];
 
     //   post item to file
     fs.writeFile(filePath, JSON.stringify(document), (err) => {
